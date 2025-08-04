@@ -9,3 +9,6 @@
 ✨ Features Clean and preprocess the dataset Perform exploratory data analysis (EDA) Train multiple ML models Evaluate models using: Accuracy Score Confusion Matrix Classification Report Visualize performance comparison of algorithms
 
 🧰 Technologies Stack Python Scikit-learn Pandas NumPy Matplotlib Seaborn
+
+How how to run:
+run app.py file 
