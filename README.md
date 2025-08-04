@@ -11,4 +11,4 @@
 🧰 Technologies Stack Python Scikit-learn Pandas NumPy Matplotlib Seaborn
 
 How how to run:
-run app.py file 
+open 'app.py' file 
