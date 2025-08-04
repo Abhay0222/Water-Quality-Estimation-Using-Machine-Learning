@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Water Quality Estimator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💧 Water Quality Estimator 💧</h1>
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="ph">pH:</label>
+                <input type="number" step="0.1" name="ph" required value="{{ form_data.get('ph','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="hardness">Hardness:</label>
+                <input type="number" step="0.1" name="hardness" required value="{{ form_data.get('hardness','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="solids">Solids:</label>
+                <input type="number" step="0.1" name="solids" required value="{{ form_data.get('solids','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="chloramines">Chloramines:</label>
+                <input type="number" step="0.1" name="chloramines" required value="{{ form_data.get('chloramines','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="sulfate">Sulfate:</label>
+                <input type="number" step="0.1" name="sulfate" required value="{{ form_data.get('sulfate','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="conductivity">Conductivity:</label>
+                <input type="number" name="conductivity" required value="{{ form_data.get('conductivity','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="organic_carbon">Organic Carbon:</label>
+                <input type="number" step="0.1" name="organic_carbon" required value="{{ form_data.get('organic_carbon','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="trihalomethanes">Trihalomethanes:</label>
+                <input type="number" step="0.1" name="trihalomethanes" required value="{{ form_data.get('trihalomethanes','') }}">
+            </div>
+
+            <div class="form-group">
+                <label for="turbidity">Turbidity:</label>
+                <input type="number" step="0.1" name="turbidity" required value="{{ form_data.get('turbidity','') }}">
+            </div>
+
+            <button type="submit">Check Potability</button>
+        </form>
+
+        {% if result %}
+            <div id="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
